@@ -28,7 +28,7 @@ import portfolioImage20 from '@/assets/f97f3288-04e2-47a4-adb2-629116862f8f.jpg'
 const PortfolioGallery: React.FC = () => {
   const { language, isRTL } = useLanguage();
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
-  const [showAllImages, setShowAllImages] = useState(true); // Show all images by default
+  const [showAllImages, setShowAllImages] = useState(false); // Show only 6 images initially
 
   const portfolioItems = [
     {
@@ -153,7 +153,7 @@ const PortfolioGallery: React.FC = () => {
     }
   ];
 
-  // Show all images by default, but allow users to collapse to see fewer
+  // Show only 6 images initially, allow users to expand to see all
   const visibleImages = showAllImages ? portfolioItems : portfolioItems.slice(0, 6);
 
   return (
