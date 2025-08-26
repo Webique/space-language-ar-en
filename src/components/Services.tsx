@@ -10,13 +10,32 @@ import {
   Box, 
   Compass 
 } from 'lucide-react';
-import portfolioOffice from '@/assets/portfolio-office.jpg';
+
+// Import new service images
+import serviceImage1 from '@/assets/3c3f004b-4a49-4e59-a637-880d8daa9d3f.jpg';
+import serviceImage2 from '@/assets/cf943f51-56ce-438a-b32d-5c76ab4f1f0a.jpg';
+import serviceImage3 from '@/assets/2d13031d-c322-49c4-83bf-d8aeb30d3893.jpg';
+import serviceImage4 from '@/assets/4936c1f1-f1dc-43b6-8f01-168369855909.jpg';
+import serviceImage5 from '@/assets/b3558a1a-ae6b-42ce-893f-0f25e632d8d9.jpg';
+import serviceImage6 from '@/assets/b444cb27-e92b-4ed3-8ed2-edb21b6a5eda.jpg';
+import serviceImage7 from '@/assets/4005c992-8140-4192-aab2-d19d8f59de7c.jpg';
 
 const Services: React.FC = () => {
   const { language, isRTL } = useLanguage();
   const servicesContent = content.services[language];
   
   const serviceIcons = [Home, Building2, Utensils, PaintBucket, Wrench, Box, Compass];
+  
+  // Map services to new images
+  const serviceImages = [
+    serviceImage1, // Residential Interior Design
+    serviceImage2, // Commercial Spaces
+    serviceImage3, // Hospitality Design
+    serviceImage4, // Modular Solutions
+    serviceImage5, // Turnkey Project Execution
+    serviceImage6, // 3D Rendering & Visualization
+    serviceImage7  // Space Planning & Vastu Consultation
+  ];
 
   return (
     <section className="py-24 bg-gradient-to-br from-white via-luxury-cream to-white relative overflow-hidden">
@@ -55,17 +74,13 @@ const Services: React.FC = () => {
                   <h3 className="text-3xl lg:text-4xl font-bold text-luxury-dark leading-tight">
                     {service}
                   </h3>
-                  
-                  <p className="text-lg text-text-muted leading-relaxed">
-                    Professional excellence in every detail, combining innovative design with practical functionality.
-                  </p>
                 </div>
 
                 {/* Service Image */}
                 <div className={`relative ${isEven ? '' : 'lg:order-1'}`}>
                   <div className="relative overflow-hidden rounded-3xl shadow-luxury group hover-reveal">
                     <img
-                      src={portfolioOffice}
+                      src={serviceImages[index]}
                       alt={service}
                       className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-110"
                     />

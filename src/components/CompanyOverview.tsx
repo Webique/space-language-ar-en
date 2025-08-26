@@ -27,17 +27,6 @@ const CompanyOverview: React.FC = () => {
             <p className={`text-xl text-text-muted leading-relaxed slide-up delay-500`}>
               {overviewContent.content}
             </p>
-            
-            <div className="slide-up delay-700">
-              <div className="inline-flex items-center space-x-4 text-primary font-semibold">
-                <span className="text-lg">Established Excellence</span>
-                <div className="flex space-x-1">
-                  {[...Array(5)].map((_, i) => (
-                    <div key={i} className="w-2 h-2 bg-primary rounded-full animate-pulse" style={{ animationDelay: `${i * 0.1}s` }}></div>
-                  ))}
-                </div>
-              </div>
-            </div>
           </div>
 
           {/* Images Side */}

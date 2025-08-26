@@ -172,7 +172,71 @@ All colors MUST be HSL.
   [dir="rtl"] .rtl-flip {
     @apply scale-x-[-1];
   }
-  
+
+  /* RTL Text Alignment */
+  [dir="rtl"] .text-center {
+    text-align: center;
+  }
+
+  [dir="rtl"] .text-left {
+    text-align: right;
+  }
+
+  [dir="rtl"] .text-right {
+    text-align: left;
+  }
+
+  /* RTL Spacing Adjustments */
+  [dir="rtl"] .space-x-3 > * + * {
+    margin-left: 0;
+    margin-right: 0.75rem;
+  }
+
+  [dir="rtl"] .space-x-reverse > * + * {
+    margin-right: 0;
+    margin-left: 0.75rem;
+  }
+
+  /* RTL Font Adjustments */
+  [dir="rtl"] .font-cairo {
+    font-family: 'Cairo', sans-serif;
+    line-height: 1.6;
+  }
+
+  [dir="rtl"] .font-tajawal {
+    font-family: 'Tajawal', sans-serif;
+    line-height: 1.6;
+  }
+
+  /* RTL Text Utilities */
+  .rtl-text {
+    text-align: center;
+    line-height: 1.6;
+  }
+
+  [dir="rtl"] .rtl-text {
+    text-align: center;
+    line-height: 1.6;
+    font-feature-settings: "kern" 1;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* RTL Button Positioning */
+  [dir="rtl"] .btn-rtl-left {
+    left: auto;
+    right: 1rem;
+  }
+
+  [dir="rtl"] .btn-rtl-right {
+    right: auto;
+    left: 1rem;
+  }
+
+  /* Fix RTL arrows to point outward instead of inward */
+  [dir="rtl"] button svg {
+    transform: scaleX(-1);
+  }
+
   /* Smooth Animations */
   .fade-in {
     animation: fadeIn 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;

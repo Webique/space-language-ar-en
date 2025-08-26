@@ -19,42 +19,42 @@ const VisionMission: React.FC = () => {
           {/* Vision Panel */}
           <div className="fade-in">
             <div className="glass-panel hover:shadow-glow transition-all duration-700 group">
-              <div className="flex items-center mb-6">
-                <div className="p-4 bg-gradient-to-br from-primary to-primary-dark rounded-2xl mr-4 group-hover:animate-pulse-glow">
-                  <Eye className="w-8 h-8 text-white" />
+            <div className={`flex items-center mb-6 ${isRTL ? 'flex-row-reverse' : ''} gap-4`}>
+            <div className="p-4 bg-gradient-to-br from-primary to-primary-dark rounded-2xl group-hover:animate-pulse-glow">
+            <Eye className="w-8 h-8 text-white" />
                 </div>
                 <h3 className={`text-3xl font-bold text-luxury-dark ${isRTL ? 'font-cairo' : 'font-montserrat'}`}>
                   {visionContent.title}
                 </h3>
               </div>
               
-              <p className={`text-lg text-text-muted leading-relaxed ${isRTL ? 'font-cairo text-right' : 'font-poppins'}`}>
+              <p className={`text-lg text-text-muted leading-relaxed ${isRTL ? 'font-cairo text-right' : 'font-poppins text-left'}`}>
                 {visionContent.content}
               </p>
               
               {/* Decorative Elements */}
-              <div className="absolute top-4 right-4 w-20 h-20 bg-luxury-gold/10 rounded-full animate-float"></div>
+              <div className={`absolute top-4 w-20 h-20 bg-luxury-gold/10 rounded-full animate-float ${isRTL ? 'left-4' : 'right-4'}`}></div>
             </div>
           </div>
 
           {/* Mission Panel */}
           <div className="slide-up delay-300">
             <div className="glass-panel hover:shadow-glow transition-all duration-700 group">
-              <div className="flex items-center mb-6">
-                <div className="p-4 bg-gradient-to-br from-primary-dark to-primary rounded-2xl mr-4 group-hover:animate-pulse-glow">
-                  <Target className="w-8 h-8 text-white" />
+            <div className={`flex items-center mb-6 ${isRTL ? 'flex-row-reverse' : ''} gap-4`}>
+            <div className="p-4 bg-gradient-to-br from-primary-dark to-primary rounded-2xl group-hover:animate-pulse-glow">
+            <Target className="w-8 h-8 text-white" />
                 </div>
                 <h3 className={`text-3xl font-bold text-luxury-dark ${isRTL ? 'font-cairo' : 'font-montserrat'}`}>
                   {missionContent.title}
                 </h3>
               </div>
               
-              <p className={`text-lg text-text-muted leading-relaxed ${isRTL ? 'font-cairo text-right' : 'font-poppins'}`}>
+              <p className={`text-lg text-text-muted leading-relaxed ${isRTL ? 'font-cairo text-right' : 'font-poppins text-left'}`}>
                 {missionContent.content}
               </p>
               
               {/* Decorative Elements */}
-              <div className="absolute bottom-4 left-4 w-16 h-16 bg-primary/10 rounded-full animate-float" style={{ animationDelay: '1s' }}></div>
+              <div className={`absolute bottom-4 w-16 h-16 bg-primary/10 rounded-full animate-float ${isRTL ? 'right-4' : 'left-4'}`} style={{ animationDelay: '1s' }}></div>
             </div>
           </div>
         </div>

@@ -101,7 +101,7 @@ const ProcessTimeline: React.FC = () => {
                       </div>
                       
                       <p className={`text-white/80 text-lg ${isRTL ? 'font-cairo' : 'font-poppins'}`}>
-                        Expert execution with attention to every detail, ensuring your vision becomes reality.
+                        {processContent.descriptions[index]}
                       </p>
                     </div>
                   </div>

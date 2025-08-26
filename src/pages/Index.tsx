@@ -1,6 +1,7 @@
 import React from 'react';
-import { LanguageProvider } from '@/contexts/LanguageContext';
-import LanguageToggle from '@/components/LanguageToggle';
+import { useLanguage } from '@/contexts/LanguageContext';
+import { content } from '@/data/content';
+import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import CompanyOverview from '@/components/CompanyOverview';
 import VisionMission from '@/components/VisionMission';
@@ -13,45 +14,66 @@ import PortfolioGallery from '@/components/PortfolioGallery';
 import ContactSection from '@/components/ContactSection';
 
 const Index = () => {
+  const { language, isRTL } = useLanguage();
+  const footerContent = content.footer[language];
+
   return (
-    <LanguageProvider>
-      <div className="min-h-screen bg-background overflow-x-hidden">
-        <LanguageToggle />
+    <div className="min-h-screen bg-background overflow-x-hidden">
+      <Navbar />
 
-        <main>
+      <main>
+        <section id="hero">
           <HeroSection />
+        </section>
+        <section id="overview">
           <CompanyOverview />
+        </section>
+        <section id="vision">
           <VisionMission />
+        </section>
+        <section id="history">
           <HistorySection />
+        </section>
+        <section id="values">
           <CoreValues />
+        </section>
+        <section id="services">
           <Services />
+        </section>
+        <section id="process">
           <ProcessTimeline />
+        </section>
+        <section id="team">
           <TeamSection />
+        </section>
+        <section id="portfolio">
           <PortfolioGallery />
+        </section>
+        <section id="contact">
           <ContactSection />
-        </main>
+        </section>
+      </main>
 
-        {/* Footer */}
-        <footer className="bg-luxury-dark text-white py-12 border-t border-luxury-gold/20">
-          <div className="container mx-auto px-6 text-center">
-            <div className="mb-6">
-              <h3 className="text-3xl font-bold text-luxury-gold mb-2 font-montserrat">
-                Space Language
-              </h3>
-              <p className="text-white/80 font-poppins">
-                Intelligent, Elegant, Sustainable Interior Design
-              </p>
-            </div>
-            
-            <div className="w-24 h-1 bg-gradient-to-r from-luxury-gold to-primary mx-auto mb-6"></div>
-            
-            <p className="text-white/60 font-poppins">
-              © 2024 Space Language. All rights reserved.
+      {/* Footer */}
+      <footer className="bg-luxury-dark text-white py-12 border-t border-luxury-gold/20">
+        <div className="container mx-auto px-6 text-center">
+          <div className="mb-6">
+            <h3 className={`text-3xl font-bold text-luxury-gold mb-2 ${isRTL ? 'font-cairo' : 'font-montserrat'}`}>
+              {language === 'en' ? 'Space Language' : 'لغة المساحة'}
+            </h3>
+            <p className={`text-white/80 ${isRTL ? 'font-cairo' : 'font-poppins'}`}>
+              {footerContent.tagline}
             </p>
           </div>
-        </footer>
-      </div>
-    </LanguageProvider>
+          
+          <div className="w-24 h-1 bg-gradient-to-r from-luxury-gold to-primary mx-auto mb-6"></div>
+          
+          <p className={`text-white/60 ${isRTL ? 'font-cairo' : 'font-poppins'}`}>
+            {footerContent.copyright}
+          </p>
+        </div>
+      </footer>
+    </div>
   );
 };
 

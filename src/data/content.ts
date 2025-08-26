@@ -110,6 +110,15 @@ export const content = {
         "3D Visualization",
         "Execution & Site Management",
         "Final Handover"
+      ],
+      descriptions: [
+        "Expert execution with attention to every detail, ensuring your vision becomes reality.",
+        "Creative concept development with mood boards that capture your unique style and preferences.",
+        "Strategic space utilization and layout planning for optimal functionality and flow.",
+        "Carefully curated materials and color palettes that reflect your aesthetic vision.",
+        "Advanced 3D rendering and visualization to bring your project to life before construction.",
+        "Professional project management with on-site supervision and quality control.",
+        "Complete project delivery with final walkthrough and client satisfaction guarantee."
       ]
     },
     ar: {
@@ -122,6 +131,15 @@ export const content = {
         "عرض ثلاثي الأبعاد",
         "التنفيذ والإشراف",
         "التسليم النهائي"
+      ],
+      descriptions: [
+        "تنفيذ احترافي مع الاهتمام بكل التفاصيل، لضمان تحويل رؤيتك إلى واقع.",
+        "تطوير المفاهيم الإبداعية مع لوحات المزاج التي تعكس أسلوبك الفريد وتفضيلاتك.",
+        "استخدام استراتيجي للمساحات وتخطيط التوزيع للحصول على وظائفية وتدفق مثاليين.",
+        "اختيار مدروس للمواد والألوان التي تعكس رؤيتك الجمالية.",
+        "تصيير وتصور ثلاثي الأبعاد متقدم لإحياء مشروعك قبل البناء.",
+        "إدارة مشاريع احترافية مع إشراف ميداني ومراقبة جودة.",
+        "تسليم المشروع كاملاً مع جولة نهائية وضمان رضا العميل."
       ]
     }
   },
@@ -153,6 +171,16 @@ export const content = {
       title: "الاتصال والمكتب",
       office: "المكتب الرئيسي: الرياض، حي المرسلات",
       cta: "لنبدأ مشروعك اليوم."
+    }
+  },
+  footer: {
+    en: {
+      tagline: "Intelligent, Elegant, Sustainable Interior Design",
+      copyright: "© 2024 Space Language. All rights reserved."
+    },
+    ar: {
+      tagline: "تصاميم داخلية ذكية، أنيقة، ومستدامة",
+      copyright: "© 2024 لغة المساحة. جميع الحقوق محفوظة."
     }
   }
 };
