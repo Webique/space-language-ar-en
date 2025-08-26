@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { content } from '@/data/content';
-import { Phone, Mail, Clock } from 'lucide-react';
+import { Phone, Mail, Clock, Instagram } from 'lucide-react';
 
 const ContactSection: React.FC = () => {
   const { language, isRTL } = useLanguage();
@@ -12,6 +12,13 @@ const ContactSection: React.FC = () => {
       icon: Phone,
       title: language === 'en' ? 'Phone' : 'الهاتف',
       content: '+966 11 123 4567'
+    },
+    {
+      icon: Instagram,
+      title: language === 'en' ? 'Instagram' : 'انستغرام',
+      content: '@spacelanguageksa',
+      link: 'https://www.instagram.com/spacelanguageksa/',
+      isSocial: true
     },
     {
       icon: Mail,
@@ -46,9 +53,24 @@ const ContactSection: React.FC = () => {
               {language === 'en' ? 'Get in Touch' : 'تواصل معنا'}
             </h3>
             
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {contactInfo.map((info, index) => {
                 const IconComponent = info.icon;
+                const contentElement = info.isSocial ? (
+                  <a 
+                    href={info.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-primary hover:text-primary-dark transition-colors duration-300 cursor-pointer"
+                  >
+                    {info.content}
+                  </a>
+                ) : (
+                  <p className={`text-text-muted ${isRTL ? 'font-cairo' : 'font-poppins'}`}>
+                    {info.content}
+                  </p>
+                );
+
                 return (
                   <div key={index} className="text-center group">
                     <div className="p-4 bg-gradient-to-br from-primary to-primary-dark rounded-xl group-hover:animate-pulse-glow mx-auto w-16 h-16 flex items-center justify-center mb-4">
@@ -57,9 +79,7 @@ const ContactSection: React.FC = () => {
                     <h4 className={`text-xl font-semibold text-luxury-dark mb-2 ${isRTL ? 'font-cairo' : 'font-montserrat'}`}>
                       {info.title}
                     </h4>
-                    <p className={`text-text-muted ${isRTL ? 'font-cairo' : 'font-poppins'}`}>
-                      {info.content}
-                    </p>
+                    {contentElement}
                   </div>
                 );
               })}

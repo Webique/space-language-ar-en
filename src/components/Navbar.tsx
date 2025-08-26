@@ -26,6 +26,7 @@ const Navbar: React.FC = () => {
 
   const navItems = [
     { id: 'overview', label: language === 'en' ? 'Overview' : 'نظرة عامة' },
+    { id: 'why-us', label: language === 'en' ? 'Why Us' : 'لماذا نحن' },
     { id: 'vision', label: language === 'en' ? 'Vision & Mission' : 'الرؤية والمهمة' },
     { id: 'history', label: language === 'en' ? 'History' : 'التاريخ' },
     { id: 'values', label: language === 'en' ? 'Core Values' : 'القيم الأساسية' },

@@ -4,6 +4,7 @@ import { content } from '@/data/content';
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import CompanyOverview from '@/components/CompanyOverview';
+import WhyUs from '@/components/WhyUs';
 import VisionMission from '@/components/VisionMission';
 import HistorySection from '@/components/HistorySection';
 import CoreValues from '@/components/CoreValues';
@@ -27,6 +28,9 @@ const Index = () => {
         </section>
         <section id="overview">
           <CompanyOverview />
+        </section>
+        <section id="why-us">
+          <WhyUs />
         </section>
         <section id="vision">
           <VisionMission />

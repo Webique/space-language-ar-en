@@ -63,6 +63,14 @@ const HeroSection: React.FC = () => {
           <Button 
             size="lg" 
             className="btn-luxury text-xl px-12 py-6 shadow-luxury hover:shadow-glow transform hover:scale-105 transition-all duration-500"
+            onClick={() => {
+              const phoneNumber = '+966 11 123 4567';
+              const message = language === 'en' 
+                ? 'Hello! I would like to book a consultation for interior design services.'
+                : 'مرحباً! أود حجز استشارة لخدمات التصميم الداخلي.';
+              const whatsappUrl = `https://wa.me/${phoneNumber.replace(/\s/g, '')}?text=${encodeURIComponent(message)}`;
+              window.open(whatsappUrl, '_blank');
+            }}
           >
             {heroContent.cta}
           </Button>
