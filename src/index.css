@@ -9,50 +9,59 @@ All colors MUST be HSL.
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 210 11% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 210 11% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 210 11% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Space Language Brand Colors */
+    --primary: 195 82% 36%; /* Teal */
+    --primary-foreground: 0 0% 100%;
+    
+    --primary-dark: 195 84% 27%; /* Dark Teal */
+    --primary-dark-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 210 5% 34%; /* Neutral Gray */
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 210 5% 34%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 195 82% 36%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 214 31% 91%;
+    --input: 214 31% 91%;
+    --ring: 195 82% 36%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Luxury Design Tokens */
+    --luxury-gold: 43 96% 56%;
+    --luxury-cream: 48 15% 94%;
+    --luxury-dark: 210 11% 15%;
+    --text-light: 0 0% 100%;
+    --text-muted: 210 5% 65%;
+    
+    /* Gradient Backgrounds */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary-dark)) 0%, hsl(var(--primary)) 100%);
+    --gradient-section: linear-gradient(180deg, hsl(var(--luxury-cream)) 0%, hsl(var(--background)) 100%);
+    --gradient-overlay: linear-gradient(45deg, hsla(var(--luxury-dark), 0.8) 0%, hsla(var(--primary-dark), 0.6) 100%);
+    
+    /* Shadows & Effects */
+    --shadow-luxury: 0 25px 50px -12px hsla(var(--luxury-dark), 0.25);
+    --shadow-elegant: 0 10px 30px -10px hsla(var(--primary), 0.3);
+    --shadow-glow: 0 0 40px hsla(var(--luxury-gold), 0.3);
+    
+    /* Animations */
+    --transition-smooth: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 
   .dark {
@@ -101,5 +110,145 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+  
+  /* Import Google Fonts */
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&family=Tajawal:wght@300;400;500;700;800&family=Cairo:wght@300;400;500;600;700&display=swap');
+}
+
+@layer components {
+  /* Luxury Button Variants */
+  .btn-luxury {
+    @apply bg-gradient-to-r from-primary to-primary-dark text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-500 transform hover:scale-105 hover:shadow-elegant;
+  }
+  
+  .btn-outline-luxury {
+    @apply border-2 border-primary text-primary px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-500 hover:bg-primary hover:text-white hover:transform hover:scale-105;
+  }
+  
+  /* Cinematic Text Effects */
+  .text-cinematic {
+    @apply text-6xl md:text-8xl font-bold tracking-tight leading-none;
+    background: var(--gradient-hero);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .text-subtitle {
+    @apply text-xl md:text-2xl text-muted-foreground font-light tracking-wide;
+  }
+  
+  /* Glass Morphism Effects */
+  .glass-panel {
+    @apply backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl p-8;
+    box-shadow: var(--shadow-luxury);
+  }
+  
+  /* Parallax Sections */
+  .parallax-section {
+    @apply relative overflow-hidden;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  /* Hover Reveal Effects */
+  .hover-reveal {
+    @apply relative overflow-hidden;
+  }
+  
+  .hover-reveal::before {
+    @apply absolute inset-0 bg-gradient-to-r from-primary/80 to-primary-dark/80 opacity-0 transition-all duration-500;
+    content: '';
+  }
+  
+  .hover-reveal:hover::before {
+    @apply opacity-100;
+  }
+  
+  /* RTL Support */
+  [dir="rtl"] .rtl-flip {
+    @apply scale-x-[-1];
+  }
+  
+  /* Smooth Animations */
+  .fade-in {
+    animation: fadeIn 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+  
+  .slide-up {
+    animation: slideUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+  
+  .word-reveal {
+    animation: wordReveal 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+}
+
+@layer utilities {
+  /* Animation Delays */
+  .delay-100 { animation-delay: 0.1s; }
+  .delay-200 { animation-delay: 0.2s; }
+  .delay-300 { animation-delay: 0.3s; }
+  .delay-400 { animation-delay: 0.4s; }
+  .delay-500 { animation-delay: 0.5s; }
+  
+  /* Custom Shadows */
+  .shadow-luxury { box-shadow: var(--shadow-luxury); }
+  .shadow-elegant { box-shadow: var(--shadow-elegant); }
+  .shadow-glow { box-shadow: var(--shadow-glow); }
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes wordReveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px) rotateX(90deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotateX(0deg);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px hsla(var(--luxury-gold), 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px hsla(var(--luxury-gold), 0.6);
   }
 }
