@@ -112,10 +112,10 @@ const Navbar: React.FC = () => {
         {/* Mobile Navigation */}
         <div className={`lg:hidden transition-all duration-500 ease-in-out ${
           isOpen 
-            ? 'max-h-[800px] opacity-100 translate-y-0' 
+            ? 'max-h-[80vh] opacity-100 translate-y-0' 
             : 'max-h-0 opacity-0 -translate-y-4'
         } overflow-hidden`}>
-          <div className="py-6 space-y-3 bg-white/10 backdrop-blur-md rounded-2xl mt-4 border border-white/20">
+          <div className="py-6 space-y-3 bg-white/10 backdrop-blur-md rounded-2xl mt-4 border border-white/20 max-h-[70vh] overflow-y-auto">
             {navItems.map((item, index) => (
               <button
                 key={item.id}
@@ -132,7 +132,7 @@ const Navbar: React.FC = () => {
             ))}
             
             {/* Mobile Language Toggle - Always Visible */}
-            <div className="px-4 py-4 border-t border-white/20">
+            <div className="px-4 py-4 border-t border-white/20 sticky bottom-0 bg-white/10 backdrop-blur-md rounded-b-2xl">
               <button
                 onClick={toggleLanguage}
                 className={`w-full px-4 py-3 rounded-lg border-2 transition-all duration-300 font-medium ${
