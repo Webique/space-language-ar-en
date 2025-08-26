@@ -43,7 +43,7 @@ All colors MUST be HSL.
     --radius: 0.75rem;
 
     /* Luxury Design Tokens */
-    --luxury-gold: 43 96% 56%;
+    --luxury-gold: 45 33% 89%; /* Beige #EDE8D0 */
     --luxury-cream: 48 15% 94%;
     --luxury-dark: 210 11% 15%;
     --text-light: 0 0% 100%;

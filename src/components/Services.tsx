@@ -87,7 +87,7 @@ const Services: React.FC = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-primary-dark/40 via-transparent to-transparent"></div>
                     
                     {/* Floating Number */}
-                    <div className="absolute top-6 right-6 w-16 h-16 bg-luxury-gold rounded-full flex items-center justify-center text-white font-bold text-xl shadow-glow">
+                    <div className="absolute top-6 right-6 w-16 h-16 bg-luxury-gold rounded-full flex items-center justify-center text-black font-bold text-xl shadow-glow">
                       {String(index + 1).padStart(2, '0')}
                     </div>
                   </div>

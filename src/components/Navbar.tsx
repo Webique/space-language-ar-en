@@ -94,8 +94,12 @@ const Navbar: React.FC = () => {
 
           {/* Mobile Menu Button */}
           <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 rounded-md transition-colors duration-200"
+            onClick={() => {
+              console.log('Mobile menu clicked, current state:', isOpen);
+              setIsOpen(!isOpen);
+            }}
+            className="lg:hidden p-2 rounded-md transition-colors duration-200 hover:bg-white/10"
+            aria-label="Toggle mobile menu"
           >
             {isOpen ? (
               <X className={`w-6 h-6 ${isScrolled ? 'text-luxury-dark' : 'text-white'}`} />
@@ -108,38 +112,37 @@ const Navbar: React.FC = () => {
         {/* Mobile Navigation */}
         <div className={`lg:hidden transition-all duration-500 ease-in-out ${
           isOpen 
-            ? 'max-h-[600px] opacity-100 translate-y-0' 
+            ? 'max-h-[800px] opacity-100 translate-y-0' 
             : 'max-h-0 opacity-0 -translate-y-4'
         } overflow-hidden`}>
-          <div className="py-4 space-y-2 bg-white/10 backdrop-blur-md rounded-2xl mt-4 border border-white/20">
+          <div className="py-6 space-y-3 bg-white/10 backdrop-blur-md rounded-2xl mt-4 border border-white/20">
             {navItems.map((item, index) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`block w-full text-left px-4 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 ${
+                className={`block w-full text-left px-4 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 ${
                   isScrolled 
                     ? 'text-luxury-dark hover:bg-luxury-dark/10 hover:text-primary' 
                     : 'text-white hover:bg-white/20 hover:text-luxury-gold'
-                } ${isRTL ? 'font-cairo' : 'font-montserrat'}`}
-                style={{ animationDelay: `${index * 30}ms` }}
+                } ${isRTL ? 'font-cairo' : 'font-poppins'}`}
+                style={{ animationDelay: `${index * 50}ms` }}
               >
-                <span className="text-sm font-medium">{item.label}</span>
+                <span className="text-base font-medium">{item.label}</span>
               </button>
             ))}
-            {/* Mobile Language Toggle */}
-            <div className="px-4 py-3 border-t border-white/20">
-              <Button
+            
+            {/* Mobile Language Toggle - Always Visible */}
+            <div className="px-4 py-4 border-t border-white/20">
+              <button
                 onClick={toggleLanguage}
-                variant="outline"
-                size="sm"
-                className={`w-full ${
+                className={`w-full px-4 py-3 rounded-lg border-2 transition-all duration-300 font-medium ${
                   isScrolled 
                     ? 'border-luxury-dark text-luxury-dark hover:bg-luxury-dark hover:text-white' 
                     : 'border-white/30 text-white hover:bg-white hover:text-luxury-dark'
-                } transition-all duration-300 font-medium`}
+                }`}
               >
                 {language === 'en' ? 'عربي' : 'English'}
-              </Button>
+              </button>
             </div>
           </div>
         </div>
