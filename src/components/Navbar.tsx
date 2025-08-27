@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import Logo from './Logo';
 
 const Navbar: React.FC = () => {
   const { language, isRTL, toggleLanguage } = useLanguage();
@@ -50,11 +51,12 @@ const Navbar: React.FC = () => {
             className="flex items-center cursor-pointer"
             onClick={() => scrollToSection('hero')}
           >
-            <div className={`text-2xl sm:text-3xl font-bold ${
-              isScrolled ? 'text-luxury-dark' : 'text-white'
-            } ${isRTL ? 'font-cairo' : 'font-montserrat'}`}>
-              {language === 'en' ? 'Space Language' : 'لغة المساحة'}
-            </div>
+            <Logo 
+              size="md" 
+              className={`transition-all duration-300 ${
+                isScrolled ? 'text-luxury-dark' : 'text-white'
+              }`}
+            />
           </div>
 
           {/* Desktop Navigation */}

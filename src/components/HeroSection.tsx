@@ -3,6 +3,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { content } from '@/data/content';
 import { Button } from '@/components/ui/button';
 import heroImage from '@/assets/hero-living-room.jpg';
+import Logo from './Logo';
 
 const HeroSection: React.FC = () => {
   const { language, isRTL } = useLanguage();
