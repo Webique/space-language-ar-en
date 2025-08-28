@@ -20,6 +20,8 @@ import serviceImage5 from '@/assets/b3558a1a-ae6b-42ce-893f-0f25e632d8d9.jpg';
 import serviceImage6 from '@/assets/b444cb27-e92b-4ed3-8ed2-edb21b6a5eda.jpg';
 import serviceImage7 from '@/assets/4005c992-8140-4192-aab2-d19d8f59de7c.jpg';
 
+
+
 const Services: React.FC = () => {
   const { language, isRTL } = useLanguage();
   const servicesContent = content.services[language];
@@ -96,6 +98,7 @@ const Services: React.FC = () => {
                   <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-primary/10 rounded-full animate-float"></div>
                   <div className="absolute -top-4 -right-4 w-16 h-16 bg-luxury-gold/20 rounded-full animate-float" style={{ animationDelay: '1s' }}></div>
                 </div>
+                
               </div>
             );
           })}

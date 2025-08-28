@@ -28,14 +28,12 @@ const Navbar: React.FC = () => {
   const navItems = [
     { id: 'overview', label: language === 'en' ? 'Overview' : 'نظرة عامة' },
     { id: 'why-us', label: language === 'en' ? 'Why Us' : 'لماذا نحن' },
-    { id: 'vision', label: language === 'en' ? 'Vision & Mission' : 'الرؤية والمهمة' },
-    { id: 'history', label: language === 'en' ? 'History' : 'التاريخ' },
     { id: 'values', label: language === 'en' ? 'Core Values' : 'القيم الأساسية' },
     { id: 'services', label: language === 'en' ? 'Services' : 'الخدمات' },
+    { id: 'our-work', label: language === 'en' ? 'Our Work' : 'أعمالنا' },
     { id: 'process', label: language === 'en' ? 'Process' : 'المنهجية' },
-    { id: 'team', label: language === 'en' ? 'Team' : 'الفريق' },
     { id: 'portfolio', label: language === 'en' ? 'Portfolio' : 'الأعمال' },
-    { id: 'contact', label: language === 'en' ? 'Contact' : 'اتصل بنا' }
+    { id: 'contact', label: language === 'en' ? 'Contact Us' : 'اتصل بنا' }
   ];
 
   return (

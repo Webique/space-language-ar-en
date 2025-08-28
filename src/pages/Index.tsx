@@ -9,6 +9,7 @@ import VisionMission from '@/components/VisionMission';
 import HistorySection from '@/components/HistorySection';
 import CoreValues from '@/components/CoreValues';
 import Services from '@/components/Services';
+import OurWork from '@/components/OurWork';
 import ProcessTimeline from '@/components/ProcessTimeline';
 import TeamSection from '@/components/TeamSection';
 import PortfolioGallery from '@/components/PortfolioGallery';
@@ -44,6 +45,9 @@ const Index = () => {
         </section>
         <section id="services">
           <Services />
+        </section>
+        <section id="our-work">
+          <OurWork />
         </section>
         <section id="process">
           <ProcessTimeline />
