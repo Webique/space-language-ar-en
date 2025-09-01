@@ -3,7 +3,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { content } from '@/data/content';
 import { Button } from '@/components/ui/button';
 import heroImage from '@/assets/cf943f51-56ce-438a-b32d-5c76ab4f1f0a.jpg';
-import Logo from './Logo';
+import logo1 from '@/assets/logo1.png';
 
 const HeroSection: React.FC = () => {
   const { language, isRTL } = useLanguage();
@@ -30,18 +30,14 @@ const HeroSection: React.FC = () => {
       
       {/* Hero Content - Perfectly Centered */}
       <div className="relative z-10 text-center px-6 max-w-6xl mx-auto">
-        {/* Company Name */}
-        <div className="mb-8 fade-in mt-16">
-          <h2 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-luxury-gold mb-4 ${isRTL ? 'font-cairo' : 'font-playfair'}`}>
-            {language === 'en' ? 'Space Language' : 'لغة المساحة'}
-          </h2>
-          <div className="w-32 h-1 bg-gradient-to-r from-luxury-gold to-primary mx-auto slide-up delay-200"></div>
-        </div>
-
         {/* Animated Headline with Logo */}
         <div className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight ${isRTL ? 'font-cairo' : 'font-playfair'}`}>
-          <div className="flex items-center justify-center gap-2 mb-2">
-            <Logo size="lg" className="text-white" />
+          <div className="flex items-center justify-center gap-2 mb-16">
+            <img 
+              src={logo1} 
+              alt="Space Language Logo" 
+              className="w-72 h-32 sm:w-80 sm:h-40 md:w-96 md:h-48 lg:w-[28rem] lg:h-56"
+            />
           </div>
           <div className="text-center">
             {words.slice(2).map((word, index) => (
@@ -58,8 +54,6 @@ const HeroSection: React.FC = () => {
             ))}
           </div>
         </div>
-        
-  
         
         {/* CTA Button */}
         <div className="fade-in delay-700">
