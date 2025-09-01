@@ -17,7 +17,7 @@ const CompanyOverview: React.FC = () => {
         <div className={`grid lg:grid-cols-2 gap-16 items-center ${isRTL ? 'lg:grid-cols-2' : ''}`}>
           
           {/* Content Side */}
-          <div className={`${isRTL ? 'lg:order-2 font-cairo' : 'font-poppins'} space-y-8`}>
+          <div className={`${isRTL ? 'lg:order-2 font-cairo' : 'font-playfair'} space-y-8`}>
             <h2 className={`text-5xl lg:text-6xl font-bold text-luxury-dark leading-tight fade-in`}>
               {overviewContent.title}
             </h2>

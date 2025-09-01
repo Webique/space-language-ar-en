@@ -23,7 +23,7 @@ const VisionMission: React.FC = () => {
             <div className="p-4 bg-gradient-to-br from-primary to-primary-dark rounded-2xl group-hover:animate-pulse-glow">
             <Eye className="w-8 h-8 text-white" />
                 </div>
-                <h3 className={`text-3xl font-bold text-luxury-dark ${isRTL ? 'font-cairo' : 'font-montserrat'}`}>
+                <h3 className={`text-3xl font-bold text-luxury-dark ${isRTL ? 'font-cairo' : 'font-playfair'}`}>
                   {visionContent.title}
                 </h3>
               </div>
@@ -44,7 +44,7 @@ const VisionMission: React.FC = () => {
             <div className="p-4 bg-gradient-to-br from-primary-dark to-primary rounded-2xl group-hover:animate-pulse-glow">
             <Target className="w-8 h-8 text-white" />
                 </div>
-                <h3 className={`text-3xl font-bold text-luxury-dark ${isRTL ? 'font-cairo' : 'font-montserrat'}`}>
+                <h3 className={`text-3xl font-bold text-luxury-dark ${isRTL ? 'font-cairo' : 'font-playfair'}`}>
                   {missionContent.title}
                 </h3>
               </div>

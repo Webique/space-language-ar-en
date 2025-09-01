@@ -33,7 +33,7 @@ const TeamSection: React.FC = () => {
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Title */}
         <div className="text-center mb-20">
-          <h2 className={`text-5xl lg:text-6xl font-bold text-white mb-6 fade-in ${isRTL ? 'font-cairo' : 'font-montserrat'}`}>
+          <h2 className={`text-5xl lg:text-6xl font-bold text-white mb-6 fade-in ${isRTL ? 'font-cairo' : 'font-playfair'}`}>
             {teamContent.title}
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-luxury-gold to-primary mx-auto slide-up delay-300"></div>
@@ -71,7 +71,7 @@ const TeamSection: React.FC = () => {
 
                 {/* Member Info */}
                 <div className="text-center space-y-4 relative z-10">
-                  <h3 className={`text-2xl font-bold text-white transition-all duration-500 group-hover:text-luxury-gold ${isRTL ? 'font-cairo' : 'font-montserrat'}`}>
+                  <h3 className={`text-2xl font-bold text-white transition-all duration-500 group-hover:text-luxury-gold ${isRTL ? 'font-cairo' : 'font-playfair'}`}>
                     {member.name}
                   </h3>
                   

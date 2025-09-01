@@ -68,6 +68,7 @@ export default {
 				poppins: ['Poppins', 'sans-serif'],
 				tajawal: ['Tajawal', 'sans-serif'],
 				cairo: ['Cairo', 'sans-serif'],
+				playfair: ['Playfair Display', 'serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

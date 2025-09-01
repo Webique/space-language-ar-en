@@ -64,7 +64,7 @@ const Navbar: React.FC = () => {
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
                 className={`text-sm font-medium transition-all duration-300 hover:scale-105 ${
-                  isRTL ? 'font-cairo' : 'font-montserrat'
+                  isRTL ? 'font-cairo' : 'font-playfair'
                 } ${
                   isScrolled 
                     ? 'text-luxury-dark hover:text-primary' 
@@ -85,28 +85,45 @@ const Navbar: React.FC = () => {
               className={`${
                 isScrolled 
                   ? 'border-luxury-dark text-luxury-dark hover:bg-luxury-dark hover:text-white' 
-                  : 'border-white/30 text-white hover:bg-white hover:text-luxury-dark'
+                  : 'border-white/30 text-black bg-white hover:bg-white/90'
               } transition-all duration-300`}
             >
               {language === 'en' ? 'عربي' : 'English'}
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => {
-              console.log('Mobile menu clicked, current state:', isOpen);
-              setIsOpen(!isOpen);
-            }}
-            className="lg:hidden p-2 rounded-md transition-colors duration-200 hover:bg-white/10"
-            aria-label="Toggle mobile menu"
-          >
-            {isOpen ? (
-              <X className={`w-6 h-6 ${isScrolled ? 'text-luxury-dark' : 'text-white'}`} />
-            ) : (
-              <Menu className={`w-6 h-6 ${isScrolled ? 'text-luxury-dark' : 'text-white'}`} />
-            )}
-          </button>
+          {/* Mobile Language Toggle and Menu Button */}
+          <div className="lg:hidden flex items-center space-x-2">
+            {/* Language Toggle Button */}
+            <Button
+              onClick={toggleLanguage}
+              variant="outline"
+              size="sm"
+              className={`${
+                isScrolled 
+                  ? 'border-luxury-dark text-luxury-dark hover:bg-luxury-dark hover:text-white' 
+                  : 'border-white/30 text-black bg-white hover:bg-white/90'
+              } transition-all duration-300`}
+            >
+              {language === 'en' ? 'عربي' : 'English'}
+            </Button>
+            
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => {
+                console.log('Mobile menu clicked, current state:', isOpen);
+                setIsOpen(!isOpen);
+              }}
+              className="p-2 rounded-md transition-colors duration-200 hover:bg-white/10"
+              aria-label="Toggle mobile menu"
+            >
+              {isOpen ? (
+                <X className={`w-6 h-6 ${isScrolled ? 'text-luxury-dark' : 'text-white'}`} />
+              ) : (
+                <Menu className={`w-6 h-6 ${isScrolled ? 'text-luxury-dark' : 'text-white'}`} />
+              )}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
@@ -130,20 +147,6 @@ const Navbar: React.FC = () => {
                 <span className="text-sm font-medium">{item.label}</span>
               </button>
             ))}
-            
-            {/* Mobile Language Toggle - Always Visible */}
-            <div className="px-4 py-3 border-t border-white/20">
-              <button
-                onClick={toggleLanguage}
-                className={`w-full px-4 py-2 rounded-lg border-2 transition-all duration-300 font-medium ${
-                  isScrolled 
-                    ? 'border-luxury-dark text-luxury-dark hover:bg-luxury-dark hover:text-white' 
-                    : 'border-white/30 text-white hover:bg-white hover:text-luxury-dark'
-                }`}
-              >
-                {language === 'en' ? 'عربي' : 'English'}
-              </button>
-            </div>
           </div>
         </div>
       </div>

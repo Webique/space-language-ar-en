@@ -115,11 +115,11 @@ const OurWork: React.FC = () => {
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-20">
-          <h2 className={`text-5xl lg:text-6xl font-bold text-luxury-dark mb-6 fade-in ${isRTL ? 'font-cairo' : 'font-montserrat'}`}>
+          <h2 className={`text-5xl lg:text-6xl font-bold text-luxury-dark mb-6 fade-in ${isRTL ? 'font-cairo' : 'font-playfair'}`}>
             {currentContent.title}
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-primary-dark mx-auto slide-up delay-300"></div>
-          <h3 className={`text-2xl lg:text-3xl font-semibold text-primary mt-6 mb-4 fade-in delay-400 ${isRTL ? 'font-cairo' : 'font-montserrat'}`}>
+                      <h3 className={`text-2xl lg:text-3xl font-semibold text-primary mt-6 mb-4 fade-in delay-400 ${isRTL ? 'font-cairo' : 'font-playfair'}`}>
             {currentContent.subtitle}
           </h3>
           <p className={`text-lg text-text-muted max-w-3xl mx-auto fade-in delay-500 ${isRTL ? 'font-cairo' : 'font-poppins'}`}>
@@ -133,7 +133,7 @@ const OurWork: React.FC = () => {
             <div key={project.id} className="max-w-7xl mx-auto">
               {/* Project Header */}
               <div className="text-center mb-12 fade-in" style={{ animationDelay: `${projectIndex * 0.2}s` }}>
-                <h4 className={`text-2xl lg:text-3xl font-bold text-luxury-dark mb-4 ${isRTL ? 'font-cairo' : 'font-montserrat'}`}>
+                <h4 className={`text-2xl lg:text-3xl font-bold text-luxury-dark mb-4 ${isRTL ? 'font-cairo' : 'font-playfair'}`}>
                   {project.title}
                 </h4>
                 <p className={`text-lg text-text-muted max-w-2xl mx-auto ${isRTL ? 'font-cairo' : 'font-poppins'}`}>
@@ -184,7 +184,7 @@ const OurWork: React.FC = () => {
               {/* Project Details */}
               <div className="mt-16 text-center fade-in" style={{ animationDelay: `${(projectIndex * 0.2) + 0.7}s` }}>
                 <div className="max-w-4xl mx-auto">
-                  <h5 className={`text-xl font-semibold text-luxury-dark mb-6 ${isRTL ? 'font-cairo' : 'font-montserrat'}`}>
+                  <h5 className={`text-xl font-semibold text-luxury-dark mb-6 ${isRTL ? 'font-cairo' : 'font-playfair'}`}>
                     {language === 'en' ? 'Project Highlights' : 'مميزات المشروع'}
                   </h5>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

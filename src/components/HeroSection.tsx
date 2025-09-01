@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { content } from '@/data/content';
 import { Button } from '@/components/ui/button';
-import heroImage from '@/assets/hero-living-room.jpg';
+import heroImage from '@/assets/cf943f51-56ce-438a-b32d-5c76ab4f1f0a.jpg';
 import Logo from './Logo';
 
 const HeroSection: React.FC = () => {
@@ -19,7 +19,7 @@ const HeroSection: React.FC = () => {
   }, [words.length]);
 
   return (
-    <section className="relative h-screen overflow-hidden flex items-center justify-center">
+    <section className="relative min-h-screen overflow-hidden flex items-center justify-center py-20">
       {/* Background Image with Overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -31,39 +31,41 @@ const HeroSection: React.FC = () => {
       {/* Hero Content - Perfectly Centered */}
       <div className="relative z-10 text-center px-6 max-w-6xl mx-auto">
         {/* Company Name */}
-        <div className="mb-8 fade-in">
-          <h2 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-luxury-gold mb-4 ${isRTL ? 'font-cairo' : 'font-montserrat'}`}>
+        <div className="mb-8 fade-in mt-16">
+          <h2 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-luxury-gold mb-4 ${isRTL ? 'font-cairo' : 'font-playfair'}`}>
             {language === 'en' ? 'Space Language' : 'لغة المساحة'}
           </h2>
           <div className="w-32 h-1 bg-gradient-to-r from-luxury-gold to-primary mx-auto slide-up delay-200"></div>
         </div>
 
-        {/* Animated Headline */}
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight">
-          {words.map((word, index) => (
-            <span
-              key={index}
-              className={`inline-block mr-4 transition-all duration-500 ${
-                index <= currentWordIndex 
-                  ? 'opacity-100 transform translate-y-0' 
-                  : 'opacity-30 transform translate-y-4'
-              }`}
-            >
-              {word}
-            </span>
-          ))}
-        </h1>
+        {/* Animated Headline with Logo */}
+        <div className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight ${isRTL ? 'font-cairo' : 'font-playfair'}`}>
+          <div className="flex items-center justify-center gap-2 mb-2">
+            <Logo size="lg" className="text-white" />
+          </div>
+          <div className="text-center">
+            {words.slice(2).map((word, index) => (
+              <span
+                key={index}
+                className={`inline-block mr-4 transition-all duration-500 ${
+                  index <= currentWordIndex 
+                    ? 'opacity-100 transform translate-y-0' 
+                    : 'opacity-30 transform translate-y-4'
+                }`}
+              >
+                {word}
+              </span>
+            ))}
+          </div>
+        </div>
         
-        {/* Subheadline */}
-        <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-12 fade-in delay-500 max-w-3xl mx-auto">
-          {heroContent.subheadline}
-        </p>
+  
         
         {/* CTA Button */}
         <div className="fade-in delay-700">
           <Button 
             size="lg" 
-            className="btn-luxury text-xl px-12 py-6 shadow-luxury hover:shadow-glow transform hover:scale-105 transition-all duration-500"
+            className={`btn-luxury text-xl px-12 py-6 shadow-luxury hover:shadow-glow transform hover:scale-105 transition-all duration-500 ${isRTL ? 'font-cairo' : 'font-playfair'}`}
             onClick={() => {
               const phoneNumber = '+966 11 123 4567';
               const message = language === 'en' 

@@ -38,7 +38,7 @@ const CoreValues: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         {/* Section Title */}
         <div className="text-center mb-8 sm:mb-12 md:mb-16">
-          <h2 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 fade-in ${isRTL ? 'font-cairo rtl-text' : 'font-montserrat'}`}>
+          <h2 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 fade-in ${isRTL ? 'font-cairo rtl-text' : 'font-playfair'}`}>
             {valuesContent.title}
           </h2>
           <div className="w-16 sm:w-20 md:w-24 h-1 bg-gradient-to-r from-luxury-gold to-primary mx-auto slide-up delay-300"></div>
@@ -58,7 +58,7 @@ const CoreValues: React.FC = () => {
               {valuesContent.items.map((value, index) => (
                 <div key={index} className="w-full flex-shrink-0 px-4 sm:px-6 md:px-8 py-8 sm:py-12 md:py-16">
                   <div className="text-center space-y-4 sm:space-y-6 md:space-y-8">
-                    <h3 className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-transparent bg-gradient-to-r from-luxury-gold to-primary bg-clip-text ${isRTL ? 'font-cairo rtl-text' : 'font-montserrat'}`}>
+                    <h3 className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-transparent bg-gradient-to-r from-luxury-gold to-primary bg-clip-text ${isRTL ? 'font-cairo rtl-text' : 'font-playfair'}`}>
                       {value.title}
                     </h3>
                     <p className={`text-base sm:text-lg md:text-xl text-white/80 max-w-xs sm:max-w-sm md:max-w-2xl mx-auto leading-relaxed ${isRTL ? 'font-cairo rtl-text' : 'font-poppins'}`}>

@@ -35,7 +35,7 @@ const ProcessTimeline: React.FC = () => {
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Title */}
         <div className="text-center mb-20">
-          <h2 className={`text-5xl lg:text-6xl font-bold text-white mb-6 fade-in ${isRTL ? 'font-cairo' : 'font-montserrat'}`}>
+          <h2 className={`text-5xl lg:text-6xl font-bold text-white mb-6 fade-in ${isRTL ? 'font-cairo' : 'font-playfair'}`}>
             {processContent.title}
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-luxury-gold to-white mx-auto slide-up delay-300"></div>
@@ -94,7 +94,7 @@ const ProcessTimeline: React.FC = () => {
                         </div>
                         
                         <div className={`${isLeft ? 'ml-4' : 'mr-4'}`}>
-                          <h3 className={`text-2xl font-bold text-white mb-2 ${isRTL ? 'font-cairo' : 'font-montserrat'}`}>
+                          <h3 className={`text-2xl font-bold text-white mb-2 ${isRTL ? 'font-cairo' : 'font-playfair'}`}>
                             {step}
                           </h3>
                         </div>

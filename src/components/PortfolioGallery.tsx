@@ -161,7 +161,7 @@ const PortfolioGallery: React.FC = () => {
       <div className="container mx-auto px-6">
         {/* Section Title */}
         <div className="text-center mb-20">
-          <h2 className={`text-5xl lg:text-6xl font-bold text-luxury-dark mb-6 fade-in ${isRTL ? 'font-cairo' : 'font-montserrat'}`}>
+          <h2 className={`text-5xl lg:text-6xl font-bold text-luxury-dark mb-6 fade-in ${isRTL ? 'font-cairo' : 'font-playfair'}`}>
             {language === 'en' ? 'Our Portfolio' : 'أعمالنا'}
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-primary-dark mx-auto slide-up delay-300"></div>

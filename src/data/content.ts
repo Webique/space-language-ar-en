@@ -1,12 +1,12 @@
 export const content = {
   hero: {
     en: {
-      headline: "Space Language – Intelligent, Elegant, Sustainable Interior Design",
+      headline: "Space Language Intelligent, Elegant, Sustainable Interior Design",
       subheadline: "Where design meets innovation and timeless creativity",
       cta: "Book a Consultation"
     },
     ar: {
-      headline: "لغة المساحة – تصاميم داخلية ذكية، أنيقة، ومستدامة",
+      headline: "لغة المساحة تصاميم داخلية ذكية، أنيقة، ومستدامة",
       subheadline: "حيث يلتقي التصميم بالابتكار والإبداع الخالد",
       cta: "احجز استشارة"
     }

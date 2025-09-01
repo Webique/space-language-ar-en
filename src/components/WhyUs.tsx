@@ -58,7 +58,7 @@ const WhyUs: React.FC = () => {
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Title */}
         <div className="text-center mb-20">
-          <h2 className={`text-5xl lg:text-6xl font-bold text-luxury-dark mb-6 fade-in ${isRTL ? 'font-cairo' : 'font-montserrat'}`}>
+          <h2 className={`text-5xl lg:text-6xl font-bold text-luxury-dark mb-6 fade-in ${isRTL ? 'font-cairo' : 'font-playfair'}`}>
             {currentContent.title}
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-primary-dark mx-auto slide-up delay-300"></div>
@@ -77,7 +77,7 @@ const WhyUs: React.FC = () => {
                 <div className="w-32 h-32 bg-gradient-to-br from-luxury-gold to-primary rounded-full flex items-center justify-center mx-auto mb-6 group-hover:animate-pulse-glow">
                   <Users className="w-16 h-16 text-white" />
                 </div>
-                <h3 className={`text-3xl font-bold text-luxury-dark mb-2 ${isRTL ? 'font-cairo' : 'font-montserrat'}`}>
+                <h3 className={`text-3xl font-bold text-luxury-dark mb-2 ${isRTL ? 'font-cairo' : 'font-playfair'}`}>
                   {currentContent.founder}
                 </h3>
                 <p className={`text-lg text-primary font-semibold ${isRTL ? 'font-cairo' : 'font-poppins'}`}>

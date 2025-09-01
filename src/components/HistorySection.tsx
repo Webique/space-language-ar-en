@@ -52,7 +52,7 @@ const HistorySection: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         {/* Section Title */}
         <div className="text-center mb-12 sm:mb-16 md:mb-20">
-          <h2 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 fade-in ${isRTL ? 'font-cairo' : 'font-montserrat'}`}>
+          <h2 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 fade-in ${isRTL ? 'font-cairo' : 'font-playfair'}`}>
             {historyContent.title}
           </h2>
           <div className="w-16 sm:w-20 md:w-24 h-1 bg-gradient-to-r from-luxury-gold to-white mx-auto slide-up delay-300"></div>
@@ -99,7 +99,7 @@ const HistorySection: React.FC = () => {
                         </div>
                         
                         <div className="clear-both">
-                          <h3 className={`text-lg sm:text-xl md:text-2xl font-bold text-white mb-3 group-hover:text-luxury-gold transition-colors duration-300 ${isRTL ? 'font-cairo' : 'font-montserrat'}`}>
+                          <h3 className={`text-lg sm:text-xl md:text-2xl font-bold text-white mb-3 group-hover:text-luxury-gold transition-colors duration-300 ${isRTL ? 'font-cairo' : 'font-playfair'}`}>
                             {milestone.title}
                           </h3>
                           
