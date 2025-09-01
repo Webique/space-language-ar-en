@@ -1,15 +1,15 @@
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { content } from '@/data/content';
-import portfolioDining from '@/assets/portfolio-dining.jpg';
-import portfolioBedroom from '@/assets/portfolio-bedroom.jpg';
-import portfolioHotel from '@/assets/portfolio-hotel.jpg';
+import image1 from '@/assets/b3558a1a-ae6b-42ce-893f-0f25e632d8d9.jpg';
+import image2 from '@/assets/aff4f97d-aa2b-4f04-8975-f93a08b85698.jpg';
+import image3 from '@/assets/941b66a3-8269-493a-adc5-3742db5df18b.jpg';
 
 const CompanyOverview: React.FC = () => {
   const { language, isRTL } = useLanguage();
   const overviewContent = content.overview[language];
   
-  const images = [portfolioDining, portfolioBedroom, portfolioHotel];
+  const images = [image1, image2, image3];
 
   return (
     <section className="py-24 bg-gradient-to-br from-luxury-cream to-white relative overflow-hidden">
