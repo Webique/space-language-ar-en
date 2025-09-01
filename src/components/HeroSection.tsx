@@ -3,7 +3,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { content } from '@/data/content';
 import { Button } from '@/components/ui/button';
 import heroImage from '@/assets/cf943f51-56ce-438a-b32d-5c76ab4f1f0a.jpg';
-import logo1 from '@/assets/logo1.png';
+import logoWhite from '@/assets/logo space language - white-01.png';
 
 const HeroSection: React.FC = () => {
   const { language, isRTL } = useLanguage();
@@ -34,9 +34,9 @@ const HeroSection: React.FC = () => {
         <div className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight ${isRTL ? 'font-cairo' : 'font-playfair'}`}>
           <div className="flex items-center justify-center gap-2 mb-16">
             <img 
-              src={logo1} 
+              src={logoWhite} 
               alt="Space Language Logo" 
-              className="w-72 h-32 sm:w-80 sm:h-40 md:w-96 md:h-48 lg:w-[28rem] lg:h-56"
+              className="w-72 h-32 sm:w-80 sm:h-40 md:w-96 md:h-48 lg:w-[32rem] lg:h-56"
             />
           </div>
           <div className="text-center">
